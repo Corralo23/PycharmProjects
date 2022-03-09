@@ -1,0 +1,20 @@
+#Crie um programa que gerencie o aproveitamento de um jogador de futebol. O programa vai ler o nome do jogador e quantas partidas ele jogou.
+# Depois, vai ler a quantidade de gols feitos em cada partida. No final, tudo sera guardado em um DICIONÁRIO, incluindo o tatal de gos feitos durante o campeonato.
+jogador = dict()
+partidas_gols = list()
+tot = soma = 0
+jogador['nome'] = str(input('Nome: '))
+tot = int(input(f'Quantas partidas o {jogador["nome"]} jogou'))
+for c in range(0, tot):
+    partidas_gols.append(int(input(f'  Quantos gols na partida {c +1}? ')))
+jogador['gols'] = partidas_gols[:]
+jogador['total'] = sum(partidas_gols)
+print(jogador)
+print('-=' * 35)
+for k, v in jogador.items():
+    print(f'O campo {k} tem o valor {v}')
+print('-=' * 35)
+print(f'O jogador {jogador["nome"]} jogou {len(jogador["gols"])} partidas')
+for i, v in enumerate(jogador['gols']):
+    print(f'   ==> Na partida {i + 1}, {jogador["nome"]} fez {v} gols')
+print(f'Foi um total de {jogador["total"]} gols em {len(jogador["gols"])} partidas. ')

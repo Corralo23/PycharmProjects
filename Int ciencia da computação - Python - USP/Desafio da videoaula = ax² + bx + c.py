@@ -1,0 +1,5 @@
+a = int(input('Valor: '))
+b = int(input('Valor: '))
+c = int(input('Valor: '))
+maior = max(a, b, c)
+print(maior)
